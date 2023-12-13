@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MICALCULADORA.Views.CalculadoraPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CalculadoraPage">
+    <StackLayout>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center" />
+        <Entry
+            x:Name="NumeroUno"
+            Placeholder="Ingrese el primer valor"
+            Text="{Binding Numero1}" />
+        <Entry
+            x:Name="NumeroDos"
+            Placeholder="Ingrese el segundo valor"
+            Text="{Binding Numero2}" />
+        <Entry
+            x:Name="Resultado"
+            Placeholder="Su resultado es"
+            Text="{Binding Resultado}" />
+        <Button
+            x:Name="Sumar"
+            Command="{Binding SeleccionaSumaCommand}"
+            Text="Sumar" />
+        <Button
+            x:Name="Restar"
+            Command="{Binding SeleccionaRestaCommand}"
+            Text="Restar" />
+        <Button
+            x:Name="Multiplicar"
+            Command="{Binding SeleccionaMultiplicacionCommand}"
+            Text="Multiplicar" />
+        <Button
+            x:Name="Dividir"
+            Command="{Binding SeleccionaDivisionCommand}"
+            Text="diividir" />
+        <Button
+            x:Name="Calcular"
+            Command="{Binding HacerCalculoCommand}"
+            Text="Calcular resultado" />
+
+
+    </StackLayout>
+</ContentPage>
